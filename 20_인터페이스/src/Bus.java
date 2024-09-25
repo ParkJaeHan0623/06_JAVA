@@ -1,4 +1,4 @@
-public class Taxi implements Meter{
+public class Bus implements Meter {
 
     @Override
     public void start() {
@@ -7,9 +7,7 @@ public class Taxi implements Meter{
 
     @Override
     public int stop(int distence) {
-       int pay = distence*1800;
-        return pay;
+        return 1500;
     }
-    
     
 }
