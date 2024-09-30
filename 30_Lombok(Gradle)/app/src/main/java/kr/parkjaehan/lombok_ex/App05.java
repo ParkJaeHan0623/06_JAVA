@@ -1,4 +1,4 @@
-package kr.parkjaehan.gson_ex;
+package kr.parkjaehan.lombok_ex;
 
 import com.google.gson.Gson;
 
