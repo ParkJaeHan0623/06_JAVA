@@ -1,0 +1,22 @@
+2024-10-10 16:39:44,554 DEBUG [org.apache.ibatis.logging.LogFactory] Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2024-10-10 16:39:44,564 DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] PooledDataSource forcefully closed/removed all connections.
+2024-10-10 16:39:44,564 DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] PooledDataSource forcefully closed/removed all connections.
+2024-10-10 16:39:44,565 DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] PooledDataSource forcefully closed/removed all connections.
+2024-10-10 16:39:44,565 DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] PooledDataSource forcefully closed/removed all connections.
+2024-10-10 16:39:44,642 DEBUG [org.apache.ibatis.transaction.jdbc.JdbcTransaction] Opening JDBC Connection
+2024-10-10 16:39:44,930 DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] Created connection 1264941544.
+2024-10-10 16:39:44,930 DEBUG [org.apache.ibatis.transaction.jdbc.JdbcTransaction] Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4b6579e8]
+2024-10-10 16:39:44,933 DEBUG [ProfessorMapper.delete] ==>  Preparing: DELETE FROM professor WHERE profno = ?;
+2024-10-10 16:39:44,960 DEBUG [ProfessorMapper.delete] ==> Parameters: 9907(Integer)
+2024-10-10 16:39:45,003 ERROR [ProfessorDelete.class] 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`myschool`.`student`, CONSTRAINT `fk_student_professor` FOREIGN KEY (`profno`) REFERENCES `professor` (`profno`))
+### The error may exist in mappers/ProfessorMapper.xml
+### The error may involve ProfessorMapper.delete-Inline
+### The error occurred while setting parameters
+### SQL: DELETE FROM professor WHERE profno = ?;
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`myschool`.`student`, CONSTRAINT `fk_student_professor` FOREIGN KEY (`profno`) REFERENCES `professor` (`profno`))
+2024-10-10 16:39:45,005 DEBUG [ProfessorDelete.class] 0개의 행이 삭제되었습니다.
+2024-10-10 16:39:45,005 DEBUG [org.apache.ibatis.transaction.jdbc.JdbcTransaction] Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4b6579e8]
+2024-10-10 16:39:45,013 DEBUG [org.apache.ibatis.transaction.jdbc.JdbcTransaction] Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4b6579e8]
+2024-10-10 16:39:45,014 DEBUG [org.apache.ibatis.transaction.jdbc.JdbcTransaction] Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4b6579e8]
+2024-10-10 16:39:45,014 DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] Returned connection 1264941544 to pool.
